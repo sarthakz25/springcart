@@ -17,7 +17,7 @@ public class InventoryController {
 
     private final InventoryService inventoryService;
 
-    // http://localhost:8082/api/inventory?skuCode=samsung_s24u&skuCode=samsung_s24fe
+    // http://localhost:8082/api/inventory?skuCode=samsung_s24&skuCode=samsung_s24u
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<InventoryResponse> isInStock(@RequestParam List<String> skuCode) {

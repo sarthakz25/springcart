@@ -3,7 +3,6 @@ package com.springcart.inventoryservice.service;
 import com.springcart.inventoryservice.dto.InventoryResponse;
 import com.springcart.inventoryservice.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,9 +17,8 @@ public class InventoryService {
     private final InventoryRepository inventoryRepository;
 
     @Transactional(readOnly = true)
-    @SneakyThrows
     public List<InventoryResponse> isInStock(List<String> skuCode) {
-        log.info("Checking Inventory");
+        log.info("Checking inventory");
 
         return inventoryRepository.findBySkuCodeIn(skuCode).stream()
                 .map(inventory ->

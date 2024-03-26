@@ -57,9 +57,9 @@ class ProductServiceApplicationTests {
 
     private ProductRequest getProductRequest() {
         return ProductRequest.builder()
-                .name("Samsung Galaxy S24 Ultra")
+                .name("Samsung Galaxy S24")
                 .description("A flagship smartphone featuring cutting-edge technology, powerful performance, and an advanced camera system.")
-                .price(BigDecimal.valueOf(129999))
+                .price(BigDecimal.valueOf(1000))
                 .build();
     }
 }
